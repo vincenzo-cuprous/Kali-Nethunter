@@ -261,7 +261,15 @@ In Kali, run this command to stop
 ```
 vnc-stop
 ```
+* Fixation Of Phantom Error
+```
+pkg install android-tools
+adb pair
+adb connect
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
 
+```
 ---
 </details>
 
